@@ -1,0 +1,30 @@
+{
+  "version": 2,
+  "builds": [
+    {
+      "src": "api/**/*.js",
+      "use": "@vercel/node"
+    }
+  ],
+  "routes": [
+    {
+      "src": "/api/(.*)",
+      "dest": "/api/$1"
+    }
+  ]
+}
+```
+
+6. **Ctrl + S** (저장)
+
+---
+
+### 6단계: 폴더 구조 최종 확인
+
+**이렇게 되어있나요?**
+```
+ad-copy-generator/
+  ├─ api/
+  │   └─ naver-keyword.js  ✅
+  ├─ package.json  ✅
+  └─ vercel.json  ✅
